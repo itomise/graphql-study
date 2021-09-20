@@ -45,7 +45,7 @@ module.exports = {
       created: new Date()
     }
 
-    const { insertedIds } = await db.collection('photos').insert(newPhoto)
+    const { insertedIds } = await db.collection('photos').insertOne(newPhoto)
     newPhoto.id = insertedIds[0]
 
     return newPhoto
